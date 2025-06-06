@@ -189,6 +189,11 @@ sensor:
         }
       }
       
+      // Return NAN if no presence detected
+      if (!id(is_present)) {
+        return NAN;
+      }
+      
       return id(last_distance);
 
 # Presence binary sensor
